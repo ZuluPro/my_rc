@@ -22,10 +22,14 @@ fi
 shopt -s checkwinsize
 
 # Aliases
-if [ "$(uname)" == 'Darwin' ]; then
+if [ "$(uname)" == 'Darwin' ] ; then
     alias ls='ls -Glh'
 else
     alias ls='ls --color=auto -lh'
 fi
 alias grep='grep --color=auto'
 alias du='du -h'
+# Nerver forger sudo
+if ( which sudo > : ) ; then
+    which updatedb && alias updatedb='sudo updatedb'
+fi
