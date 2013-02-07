@@ -29,6 +29,12 @@ else
 fi
 alias grep='grep --color=auto'
 alias du='du -h'
+if [ $USER == 'root' ]; then
+    alias ifup='sudo ifup'
+    alias ifdown='sudo ifdown'
+    alias service='sudo service'
+fi
+
 # Nerver forger sudo
 if ( which sudo > : ) ; then
     which updatedb && alias updatedb='sudo updatedb'
