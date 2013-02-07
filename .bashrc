@@ -29,10 +29,11 @@ else
 fi
 alias grep='grep --color=auto'
 alias du='du -h'
-if [ $USER == 'root' ]; then
+if [ $USER != 'root' ]; then
     alias ifup='sudo ifup'
     alias ifdown='sudo ifdown'
     alias service='sudo service'
+    alias ntpdate-debian='sudo ntpdate-debian'
 fi
 
 # Nerver forger sudo
