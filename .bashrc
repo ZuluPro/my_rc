@@ -34,9 +34,5 @@ if [ $USER != 'root' ]; then
     alias ifdown='sudo ifdown'
     alias service='sudo service'
     alias ntpdate-debian='sudo ntpdate-debian'
-fi
-
-# Nerver forger sudo
-if ( which sudo > : ) ; then
-    which updatedb && alias updatedb='sudo updatedb'
+    alias updatedb='sudo updatedb'
 fi
