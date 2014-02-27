@@ -33,3 +33,5 @@ if has("autocmd")
         \   exe "normal g`\"" |
     \ endif
 endif
+
+set backspace=indent,eol,start
